@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import ImageCarousel from '../ImageCarousel/ImageCarousel';
+
+import { Landing } from '../Landing/Landing';
 
 export default class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <ImageCarousel />
+        <Landing />
       </div>
     );
   }

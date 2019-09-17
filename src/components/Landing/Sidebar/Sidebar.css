@@ -1,0 +1,9 @@
+.sidebar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebarLink:hover {
+  cursor: pointer;
+}
