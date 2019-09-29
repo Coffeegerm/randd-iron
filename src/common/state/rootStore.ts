@@ -5,8 +5,8 @@ import thunk from 'redux-thunk';
 import { rootReducer } from './rootReducer';
 
 export const configureStore = () => {
-  const middlewares = [thunk];
-  const middleWareEnhancer = redux.applyMiddleware(...middlewares);
+  const middleware = [thunk];
+  const middleWareEnhancer = redux.applyMiddleware(...middleware);
 
   const createdStore = redux.createStore(rootReducer, composeWithDevTools(middleWareEnhancer));
 

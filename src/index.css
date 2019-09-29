@@ -1,13 +1,51 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'BlastrickNormal';
+  src: local('BlastrickNormal'), url(./fonts/Blastrick-Normal.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickNormalInline';
+  src: local('BlastrickNormalInline'), url(./fonts/Blastrick-Normal-Inline.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickNormalOutline';
+  src: local('BlastrickNormalOutline'), url(./fonts/Blastrick-Normal-Outline.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickNormalShadow';
+  src: local('BlastrickNormalShadow'), url(./fonts/Blastrick-Normal-Shadow.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickSpecialInline';
+  src: local('BlastrickSpecialInline'), url(./fonts/Blastrick-Special-Inline.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickSpecialOutline';
+  src: local('BlastrickSpecialOutline'), url(./fonts/Blastrick-Special-Outline.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickSpecialShadow';
+  src: local('BlastrickSpecialShadow'), url(./fonts/Blastrick-Special-Shadow.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlastrickSpecial';
+  src: local('BlastrickSpecial'), url(./fonts/Blastrick-Special.ttf) format('truetype');
 }
