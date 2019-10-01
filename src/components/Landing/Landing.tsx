@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar } from './Bar/Bar';
 import './Landing.css';
 import { Container, makeStyles } from '@material-ui/core';
-import Contact from './Contact/Contact';
+import { Contact } from './Contact/Contact';
 import { DisplayItem } from '../../common/models/display';
 import About from './About/About';
 import './Landing.css';

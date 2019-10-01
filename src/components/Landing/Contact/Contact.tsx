@@ -1,73 +1,63 @@
-import React, { PureComponent } from 'react';
-import { TextField, Button, Grid } from '@material-ui/core';
-import { emailRegex } from '../../../common/utils/constants';
+import * as React from 'react';
+import { TextField, Button, Grid, makeStyles, Typography } from '@material-ui/core';
+import { sendEmail } from '../../../common/utils/email';
 
-type ContactState = {
-  name: string;
-  email: string;
-  message: string;
-};
-
-export default class Contact extends PureComponent<{}, ContactState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: ''
-    };
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+    marginTop: '20px',
+    alignItems: 'center'
+  },
+  message: {
+    flexGrow: 1
   }
+});
 
-  render() {
-    return (
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <TextField label="Name" variant="outlined" onChange={this.handleNameChange} value={this.state.name} />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            error={!this.verifyEmail}
-            label="Email"
-            variant="outlined"
-            onChange={this.handleEmailChange}
-            value={this.state.email}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            label="Message"
-            variant="outlined"
-            onChange={this.handleMessageChange}
-            value={this.state.message}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Button disabled={!this.verifyEmail}>Submit</Button>
-        </Grid>
+export const Contact: React.FC = () => {
+  const styles = useStyles();
+
+  const [information, setValues] = React.useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const updateValue = (e: any) => {
+    setValues({
+      ...information,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <Grid container spacing={2} className={styles.root}>
+      <Typography>
+        Need something custom made for a doorway, by the pool, or just want something to liven up your outside or inside
+        area?
+      </Typography>
+      <Typography>
+        Send us an email with some information about what you'd like or any questions that you might have and we'll get
+        back to you as soon as possible so that we can get you just what you would like!
+      </Typography>
+      <Grid item xs={6}>
+        <TextField label="Name" name="name" variant="outlined" onChange={updateValue} value={information.name} />
       </Grid>
-    );
-  }
-
-  private handleNameChange = (event: any) => {
-    this.setState({
-      name: event.target.value
-    });
-  };
-
-  private handleEmailChange = (event: any) => {
-    this.setState({
-      email: event.target.value
-    });
-  };
-
-  private handleMessageChange = (event: any) => {
-    this.setState({
-      message: event.target.value
-    });
-    console.log(this.state);
-  };
-
-  private verifyEmail = (): boolean => {
-    return emailRegex.test(this.state.email);
-  };
-}
+      <Grid item xs={6}>
+        <TextField label="Email" name="email" variant="outlined" onChange={updateValue} value={information.email} />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          className={styles.message}
+          label="Message"
+          name="message"
+          variant="outlined"
+          onChange={updateValue}
+          value={information.message}
+        />
+      </Grid>
+      <Grid item xs={3}>
+        <Button onClick={() => sendEmail(information.name, information.email, information.message)}>Submit</Button>
+      </Grid>
+    </Grid>
+  );
+};
