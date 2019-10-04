@@ -1,14 +1,19 @@
 import React from 'react';
-import './App.css';
-
+import { makeStyles } from '@material-ui/core';
 import { Landing } from '../Landing/Landing';
 
-export default class App extends React.PureComponent {
-  render() {
-    return (
-      <div className="App">
-        <Landing />
-      </div>
-    );
+const useStyles = makeStyles({
+  app: {
+    height: '100vp',
+    width: '100vw'
   }
-}
+});
+
+export const App: React.FC = () => {
+  const styles = useStyles();
+  return (
+    <div className={styles.app}>
+      <Landing />
+    </div>
+  );
+};

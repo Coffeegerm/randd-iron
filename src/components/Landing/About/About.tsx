@@ -1,12 +1,19 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, makeStyles } from '@material-ui/core';
 
-export default class About extends React.PureComponent {
-  render() {
-    return (
-      <div>
-        <Typography>We are a husband and wife owned buisness</Typography>
-      </div>
-    );
+const useStyles = makeStyles({
+  root: {
+    textAlign: 'center',
+    marginTop: '20px'
   }
-}
+});
+
+export const About: React.FC = () => {
+  const styles = useStyles();
+  return (
+    <div className={styles.root}>
+      <Typography>We are a husband and wife owned business.</Typography>
+      <Typography>With 20 years of experience</Typography>
+    </div>
+  );
+};

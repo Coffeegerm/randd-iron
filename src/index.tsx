@@ -1,21 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App';
+import { App } from './components/App/App';
 import * as serviceWorker from './serviceWorker';
-import { Provider } from 'react-redux';
-import { store } from './common/state/store';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './theme';
 import { CssBaseline } from '@material-ui/core';
 
 const Root = () => (
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
-  </Provider>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>
 );
 
 ReactDOM.render(<Root />, document.getElementById('root') as HTMLElement);
