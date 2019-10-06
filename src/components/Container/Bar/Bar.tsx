@@ -1,7 +1,6 @@
 import React from 'react';
-import { Toolbar, Typography, Button, AppBar } from '@material-ui/core';
+import { Toolbar, Typography, AppBar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import { DisplayItem } from '../../../common/models/display';
 
 const useStyles = makeStyles({
   root: {
@@ -29,11 +28,7 @@ const useStyles = makeStyles({
   }
 });
 
-type BarProps = {
-  updateScreen: (displayItem: DisplayItem) => void;
-};
-
-export const Bar = ({ updateScreen }: BarProps) => {
+export const Bar = () => {
   const styles = useStyles();
   return (
     <AppBar position="static" className={styles.appBar}>
@@ -41,15 +36,6 @@ export const Bar = ({ updateScreen }: BarProps) => {
         <Typography variant="h6" className={styles.headerTitle}>
           R & D Iron
         </Typography>
-
-        <div className={styles.floatLeft}>
-          <Button color="inherit" className={styles.button} onClick={() => updateScreen(DisplayItem.About)}>
-            About
-          </Button>
-          <Button color="inherit" className={styles.button} onClick={() => updateScreen(DisplayItem.Contact)}>
-            Contact Us
-          </Button>
-        </div>
       </Toolbar>
     </AppBar>
   );
