@@ -1,9 +1,8 @@
 import React from 'react';
-import { Bar } from './Bar/Bar';
+import { Bar } from '../Bar/Bar';
 import { Container, makeStyles } from '@material-ui/core';
 import { Contact } from './Contact/Contact';
 import { About } from './About/About';
-import { Home } from './Home/Home';
 
 const useStyles = makeStyles({
   container: {
@@ -11,16 +10,15 @@ const useStyles = makeStyles({
   }
 });
 
-export const Controller: React.FC = () => {
+export const Home: React.FC = () => {
   const styles = useStyles();
 
   return (
     <div>
       <Bar />
       <Container className={styles.container} maxWidth="lg">
-        <Home />
-        <About />
         <Contact />
+        <About />
       </Container>
     </div>
   );

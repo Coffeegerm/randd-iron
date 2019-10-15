@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import { Controller } from '../Container/Controller';
+import { Home } from '../Home/Home';
+import { Router, Route, Switch } from 'react-router-dom';
+import { Gallery } from '../Gallery/Gallery';
+import { History } from '../../common/utils/history';
 
 const useStyles = makeStyles({
   app: {
@@ -15,7 +18,12 @@ export const App: React.FC = () => {
   const styles = useStyles();
   return (
     <div className={styles.app}>
-      <Controller />
+      <Router history={History}>
+        <Switch>
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
     </div>
   );
 };

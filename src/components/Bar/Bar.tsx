@@ -1,6 +1,7 @@
 import React from 'react';
-import { Toolbar, Typography, AppBar } from '@material-ui/core';
+import { Toolbar, Typography, AppBar, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -36,6 +37,10 @@ export const Bar = () => {
         <Typography variant="h6" className={styles.headerTitle}>
           R & D Iron
         </Typography>
+
+        <Button>
+          <Link to="/gallery">Gallery</Link>
+        </Button>
       </Toolbar>
     </AppBar>
   );

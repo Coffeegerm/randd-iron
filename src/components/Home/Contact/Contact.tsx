@@ -5,7 +5,6 @@ import { sendEmail } from '../../../common/utils/email';
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    flexGrow: 1,
     marginTop: '20px',
     justifyItems: 'center',
     padding: '20px 0'
@@ -41,14 +40,7 @@ export const Contact: React.FC = () => {
     <Paper>
       <Container maxWidth="md" className={styles.container}>
         <Grid container spacing={2} className={styles.root}>
-          <Typography>
-            Need something custom made for a doorway, by the pool, or just want something to liven up your outside or
-            inside area?
-          </Typography>
-          <Typography>
-            Send us an email with some information about what you'd like or any questions that you might have and we'll
-            get back to you as soon as possible so that we can get you just what you would like!
-          </Typography>
+          <Typography>Get in touch!</Typography>
           <Grid item xs={6}>
             <TextField
               label="Name"
