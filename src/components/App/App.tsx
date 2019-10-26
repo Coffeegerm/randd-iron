@@ -4,6 +4,7 @@ import { Home } from '../Home/Home';
 import { Router, Route, Switch } from 'react-router-dom';
 import { Gallery } from '../Gallery/Gallery';
 import { History } from '../../common/utils/history';
+import { Bar } from '../Bar/Bar';
 
 const useStyles = makeStyles({
   app: {
@@ -19,6 +20,7 @@ export const App: React.FC = () => {
   return (
     <div className={styles.app}>
       <Router history={History}>
+        <Bar />
         <Switch>
           <Route path="/gallery" component={Gallery} />
           <Route path="/" component={Home} />

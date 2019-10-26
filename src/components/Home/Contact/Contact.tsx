@@ -6,17 +6,27 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     marginTop: '20px',
-    justifyItems: 'center',
     padding: '20px 0'
   },
   container: {
     margin: '20px 0'
   },
+  header: {
+    fontSize: '24px',
+    justifyContent: 'center',
+    marginLeft: '20px'
+  },
   message: {
-    width: '100%'
+    width: '100%',
+    margin: '10px 20px'
   },
   textField: {
-    width: '100%'
+    width: '100%',
+    margin: '10px 20px'
+  },
+  button: {
+    marginTop: '10px',
+    marginLeft: '15px'
   }
 });
 
@@ -37,46 +47,40 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <Paper>
-      <Container maxWidth="md" className={styles.container}>
+    <Container maxWidth="md" className={styles.container}>
+      <Paper>
         <Grid container spacing={2} className={styles.root}>
-          <Typography>Get in touch!</Typography>
-          <Grid item xs={6}>
-            <TextField
-              label="Name"
-              name="name"
-              variant="outlined"
-              onChange={updateValue}
-              value={information.name}
-              className={styles.textField}
-            />
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              label="Email"
-              name="email"
-              variant="outlined"
-              onChange={updateValue}
-              value={information.email}
-              className={styles.textField}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              className={styles.message}
-              label="Message"
-              name="message"
-              variant="outlined"
-              onChange={updateValue}
-              value={information.message}
-              multiline
-            />
-          </Grid>
-          <Grid item xs={3}>
-            <Button onClick={() => sendEmail(information.name, information.email, information.message)}>Submit</Button>
-          </Grid>
+          <Typography className={styles.header}>Get in touch!</Typography>
+          <TextField
+            label="Name"
+            name="name"
+            onChange={updateValue}
+            value={information.name}
+            className={styles.textField}
+          />
+          <TextField
+            label="Email"
+            name="email"
+            onChange={updateValue}
+            value={information.email}
+            className={styles.textField}
+          />
+          <TextField
+            className={styles.message}
+            label="Message"
+            name="message"
+            onChange={updateValue}
+            value={information.message}
+            multiline
+          />
+          <Button
+            className={styles.button}
+            onClick={() => sendEmail(information.name, information.email, information.message)}
+          >
+            Send
+          </Button>
         </Grid>
-      </Container>
-    </Paper>
+      </Paper>
+    </Container>
   );
 };

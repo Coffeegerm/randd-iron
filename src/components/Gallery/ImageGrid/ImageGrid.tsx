@@ -14,29 +14,9 @@ const useStyles = makeStyles({
     overflow: 'hidden'
   },
   gridList: {
-    width: '100%',
-    height: 450
+    width: '100%'
   }
 });
-
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *     cols: 2,
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 
 const tileData = [
   {
@@ -64,14 +44,12 @@ const tileData = [
 export const ImageGrid = () => {
   const classes = useStyles();
   return (
-    <div>
-      <GridList cellHeight={160} className={classes.gridList} cols={12}>
-        {tileData.map(tile => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+    <GridList cellHeight={160} className={classes.gridList} cols={12}>
+      {tileData.map(tile => (
+        <GridListTile key={tile.img} cols={tile.cols || 1}>
+          <img src={tile.img} alt={tile.title} />
+        </GridListTile>
+      ))}
+    </GridList>
   );
 };

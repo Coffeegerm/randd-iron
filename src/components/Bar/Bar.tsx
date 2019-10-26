@@ -16,16 +16,16 @@ const useStyles = makeStyles({
     backgroundColor: '#333333'
   },
   button: {
+    color: 'white',
     fontFamily: 'BlastrickNormal',
-    marginRight: '10px',
     fontSize: '24px',
     backgroundColor: 'transparent',
     '&:hover': {
       backgroundColor: 'transparent'
     }
   },
-  floatLeft: {
-    float: 'right'
+  link: {
+    color: 'white'
   }
 });
 
@@ -38,8 +38,10 @@ export const Bar = () => {
           R & D Iron
         </Typography>
 
-        <Button>
-          <Link to="/gallery">Gallery</Link>
+        <Button className={styles.button}>
+          <Link className={styles.link} to="/gallery">
+            Gallery
+          </Link>
         </Button>
       </Toolbar>
     </AppBar>
