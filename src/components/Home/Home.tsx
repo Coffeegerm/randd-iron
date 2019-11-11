@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import { Contact } from './Contact/Contact';
 import pool_railing2 from '../../assets/pool_railing2.jpg';
 import { About } from './About/About';
@@ -7,24 +7,15 @@ import { About } from './About/About';
 const useStyles = makeStyles({
   container: {
     margin: '0 auto',
-    background: `url(${pool_railing2})`,
-    height: '100%',
-    width: '100%'
+    width: '100vw'
   },
   columns: {
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    minHeight: '85vh'
-  },
-  column: {
-    width: '50%'
-  },
-  left: {
-    display: 'flex',
+    justifyContent: 'center',
     flexDirection: 'column',
     textAlign: 'center',
-    justifyContent: 'center'
+    margin: 10 % 0,
+    alignItems: 'center'
   },
   typography: {
     fontSize: '70px',
@@ -40,16 +31,11 @@ export const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.columns}>
-        <div className={styles.column}>
-          <div className={styles.left}>
-            <Typography className={styles.typography}>Custom</Typography>
-            <Typography className={styles.typography}>Ornamental</Typography>
-            <Typography className={styles.typography}>Welding</Typography>
-          </div>
-        </div>
-        <div className={styles.column}>
-          <Contact />
-        </div>
+        <Typography className={styles.typography}>Custom Ornamental Handrails</Typography>
+        <Typography className={styles.typography}>Spiral Staircases</Typography>
+        <Typography className={styles.typography}>Gates & More</Typography>
+
+        <Contact />
       </div>
       <About />
     </div>

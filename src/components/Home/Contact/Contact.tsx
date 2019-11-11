@@ -1,32 +1,22 @@
 import * as React from 'react';
-import { TextField, Button, Container, Grid, makeStyles, Typography, Paper } from '@material-ui/core';
+import { TextField, Button, Container, makeStyles, Typography, Paper } from '@material-ui/core';
 import { sendEmail } from '../../../common/utils/email';
 
 const useStyles = makeStyles({
   root: {
     display: 'flex',
+    flexDirection: 'column',
     marginTop: '20px',
-    padding: '20px 0'
-  },
-  container: {
-    margin: '20px 0'
+    padding: '20px 15px'
   },
   header: {
-    fontSize: '24px',
+    fontSize: '30px',
     justifyContent: 'center',
     marginLeft: '20px'
   },
-  message: {
-    width: '100%',
-    margin: '10px 20px'
-  },
-  textField: {
-    width: '100%',
-    margin: '10px 20px'
-  },
   button: {
-    marginTop: '10px',
-    marginLeft: '15px'
+    margin: '10px 0',
+    fontSize: '16px'
   }
 });
 
@@ -40,46 +30,31 @@ export const Contact: React.FC = () => {
   });
 
   const updateValue = (e: any) => {
+    const { name, value } = e.target;
     setValues({
       ...information,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
   return (
-    <Container maxWidth="md" className={styles.container}>
+    <Container maxWidth="md">
       <Paper>
-        <Grid container spacing={2} className={styles.root}>
+        <div className={styles.root}>
           <Typography className={styles.header}>Get in touch!</Typography>
-          <TextField
-            label="Name"
-            name="name"
-            onChange={updateValue}
-            value={information.name}
-            className={styles.textField}
-          />
-          <TextField
-            label="Email"
-            name="email"
-            onChange={updateValue}
-            value={information.email}
-            className={styles.textField}
-          />
-          <TextField
-            className={styles.message}
-            label="Message"
-            name="message"
-            onChange={updateValue}
-            value={information.message}
-            multiline
-          />
+          <TextField label="Name" name="name" onChange={updateValue} value={information.name} />
+          <TextField label="Email" name="email" onChange={updateValue} value={information.email} />
+          <TextField label="Message" name="message" onChange={updateValue} value={information.message} multiline />
           <Button
             className={styles.button}
             onClick={() => sendEmail(information.name, information.email, information.message)}
           >
             Send
           </Button>
-        </Grid>
+          <Typography>You can also reach us at:</Typography>
+          <Typography>(540) 519-9781</Typography>
+          <Typography>RAndDIron@gmail.com</Typography>
+        </div>
       </Paper>
     </Container>
   );
