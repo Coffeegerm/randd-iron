@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#A9A9A9'
+    background: 'linear-gradient(45deg, #8b0000 40%, #9e4f00 90%)'
   }
 });
 

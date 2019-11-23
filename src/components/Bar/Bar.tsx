@@ -4,9 +4,6 @@ import { makeStyles } from '@material-ui/styles';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
-  root: {
-    flexGrow: 1
-  },
   headerTitle: {
     flexGrow: 1,
     fontFamily: 'BlastrickSpecial',
@@ -25,7 +22,13 @@ const useStyles = makeStyles({
     }
   },
   link: {
-    color: 'white'
+    color: 'white',
+    textDecoration: 'none'
+  },
+  toolbar: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 });
 
@@ -33,10 +36,12 @@ export const Bar = () => {
   const styles = useStyles();
   return (
     <AppBar position="static" className={styles.appBar}>
-      <Toolbar>
-        <Typography variant="h6" className={styles.headerTitle}>
-          R & D Iron
-        </Typography>
+      <Toolbar className={styles.toolbar}>
+        <Link className={styles.link} to="/">
+          <Typography variant="h6" className={styles.headerTitle}>
+            R & D Iron
+          </Typography>
+        </Link>
 
         <Button className={styles.button}>
           <Link className={styles.link} to="/gallery">

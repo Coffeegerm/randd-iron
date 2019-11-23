@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import { Contact } from './Contact/Contact';
-import pool_railing2 from '../../assets/pool_railing2.jpg';
 import { About } from './About/About';
 
 const useStyles = makeStyles({
