@@ -6,7 +6,7 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: '20px',
+    marign: '20px 0px',
     padding: '20px 15px'
   },
   header: {
@@ -17,6 +17,11 @@ const useStyles = makeStyles({
   button: {
     margin: '10px 0',
     fontSize: '16px'
+  },
+  phone: {
+    textDecoration: 'none',
+    color: 'black',
+    margin: '10px 0px'
   }
 });
 
@@ -52,7 +57,11 @@ export const Contact: React.FC = () => {
             Send
           </Button>
           <Typography>You can also reach us at:</Typography>
-          <Typography>(540) 519-9781</Typography>
+          <Typography>
+            <a href="tell:5405199781" className={styles.phone}>
+              (540) 519-9781
+            </a>
+          </Typography>
           <Typography>RAndDIron@gmail.com</Typography>
         </div>
       </Paper>

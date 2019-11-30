@@ -11,6 +11,7 @@ import outsideGate from '../../../assets/outside-gate.jpg';
 import outsideRailing from '../../../assets/outside-railing.jpg';
 import outsideStairs from '../../../assets/outside-stairs.jpg';
 import supportBeam from '../../../assets/support-beams.jpg';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles({
   gridList: {
@@ -74,10 +75,12 @@ const tileData = [
 
 export const ImageGrid = () => {
   const classes = useStyles();
+  const matches = useMediaQuery('(max-width: 768px)');
+
   return (
     <GridList cellHeight="auto" className={classes.gridList} cols={12}>
       {tileData.map(tile => (
-        <GridListTile key={tile.img} cols={tile.cols || 1}>
+        <GridListTile key={tile.img} cols={matches ? 12 : tile.cols || 1}>
           <img src={tile.img} alt={tile.title} />
         </GridListTile>
       ))}
