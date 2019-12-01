@@ -87,3 +87,5 @@ export const ImageGrid = () => {
     </GridList>
   );
 };
+
+export default ImageGrid;

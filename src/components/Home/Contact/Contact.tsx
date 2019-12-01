@@ -62,7 +62,7 @@ export const Contact: React.FC = () => {
               (540) 519-9781
             </a>
           </Typography>
-          <Typography>RAndDIron@gmail.com</Typography>
+          <Typography>randiron@gmail.com</Typography>
         </div>
       </Paper>
     </Container>
