@@ -59,7 +59,7 @@ export const Contact: React.FC = () => {
           </Button>
           <Typography>You can also reach us at:</Typography>
           <Typography>
-            <a href="tell:5405199781" className={styles.phone}>
+            <a href="tel:5405199781" className={styles.phone}>
               (540) 519-9781
             </a>
           </Typography>
