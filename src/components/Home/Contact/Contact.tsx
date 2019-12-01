@@ -1,5 +1,6 @@
+import { Button, Container, makeStyles, Paper, TextField, Typography } from '@material-ui/core';
 import * as React from 'react';
-import { TextField, Button, Container, makeStyles, Typography, Paper } from '@material-ui/core';
+
 import { sendEmail } from '../../../common/utils/email';
 
 const useStyles = makeStyles({

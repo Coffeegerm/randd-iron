@@ -1,17 +1,17 @@
-import * as React from 'react';
 import { GridList, GridListTile, makeStyles } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import * as React from 'react';
 
-import gate from '../../../assets/gate.jpg';
-import pool_railing from '../../../assets/pool_railing.jpg';
-import pool_railing2 from '../../../assets/pool_railing2.jpg';
-import stairs from '../../../assets/stairs.jpg';
 import bench from '../../../assets/bench.jpg';
+import gate from '../../../assets/gate.jpg';
 import insideStairs from '../../../assets/inside-stairs.jpg';
 import outsideGate from '../../../assets/outside-gate.jpg';
 import outsideRailing from '../../../assets/outside-railing.jpg';
 import outsideStairs from '../../../assets/outside-stairs.jpg';
+import pool_railing from '../../../assets/pool_railing.jpg';
+import pool_railing2 from '../../../assets/pool_railing2.jpg';
+import stairs from '../../../assets/stairs.jpg';
 import supportBeam from '../../../assets/support-beams.jpg';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles({
   gridList: {

@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "max-line-length": {
+      "options": [120]
+    },
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "interface-name": false,
+    "no-object-literal-type-assertion": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true
+      }
+    ],
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    }
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [120]
+    }
+  },
+  "extends": ["tslint:latest", "tslint-config-prettier"]
+}
