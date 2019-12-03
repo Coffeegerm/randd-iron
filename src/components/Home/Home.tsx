@@ -2,7 +2,6 @@ import { makeStyles, Typography } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
 
-import { About } from './About/About';
 import { Contact } from './Contact/Contact';
 
 const useStyles = makeStyles({
