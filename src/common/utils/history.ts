@@ -13,3 +13,5 @@ export function handleNavigateEvent(route: string): (event: React.MouseEvent<HTM
 export function navigateTo(route: string): void {
   History.push(route);
 }
+
+export default History;

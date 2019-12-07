@@ -17,14 +17,16 @@ const useStyles = makeStyles({
   }
 });
 
-export const About: React.FC = () => {
-  const styles = useStyles();
+const About: React.FC = () => {
+  const { container, typography } = useStyles();
   return (
-    <AppBar position="static" className={styles.container}>
-      <Typography className={styles.typography}>
+    <AppBar position="static" className={container}>
+      <Typography className={typography}>
         With 20 years of experience and certifications in FCAW, MIG, and TIG welding we guarantee that whatever you
         want, we can make.
       </Typography>
     </AppBar>
   );
 };
+
+export default About;

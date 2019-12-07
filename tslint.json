@@ -11,6 +11,7 @@
     "interface-name": false,
     "no-object-literal-type-assertion": false,
     "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
     "ordered-imports": [
       true,
       {

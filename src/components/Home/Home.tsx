@@ -2,7 +2,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
 
-import { Contact } from './Contact/Contact';
+import Contact from './Contact/Contact';
 
 const useStyles = makeStyles({
   container: {
@@ -26,20 +26,20 @@ const useStyles = makeStyles({
   }
 });
 
-export const Home: React.FC = () => {
-  const styles = useStyles();
+const Home: React.FC = () => {
+  const { container, typography, mobileTypography } = useStyles();
 
   const matches = useMediaQuery('(max-width: 768px)');
 
   return (
-    <div className={styles.container}>
-      <Typography className={matches ? styles.mobileTypography : styles.typography}>
-        Custom Ornamental Handrails
-      </Typography>
-      <Typography className={matches ? styles.mobileTypography : styles.typography}>Spiral Staircases</Typography>
-      <Typography className={matches ? styles.mobileTypography : styles.typography}>Gates & More</Typography>
+    <div className={container}>
+      <Typography className={matches ? mobileTypography : typography}>Custom Ornamental Handrails</Typography>
+      <Typography className={matches ? mobileTypography : typography}>Spiral Staircases</Typography>
+      <Typography className={matches ? mobileTypography : typography}>Gates & More</Typography>
 
       <Contact />
     </div>
   );
 };
+
+export default Home;

@@ -32,19 +32,19 @@ const useStyles = makeStyles({
   }
 });
 
-export const Bar = () => {
-  const styles = useStyles();
+const Bar = () => {
+  const { headerTitle, appBar, button, link, toolbar } = useStyles();
   return (
-    <AppBar position="static" className={styles.appBar}>
-      <Toolbar className={styles.toolbar}>
-        <Link className={styles.link} to="/">
-          <Typography variant="h6" className={styles.headerTitle}>
+    <AppBar position="sticky" className={appBar}>
+      <Toolbar className={toolbar}>
+        <Link className={link} to="/">
+          <Typography variant="h6" className={headerTitle}>
             R & D Iron
           </Typography>
         </Link>
 
-        <Button className={styles.button}>
-          <Link className={styles.link} to="/gallery">
+        <Button className={button}>
+          <Link className={link} to="/gallery">
             Gallery
           </Link>
         </Button>
@@ -52,3 +52,4 @@ export const Bar = () => {
     </AppBar>
   );
 };
+export default Bar;

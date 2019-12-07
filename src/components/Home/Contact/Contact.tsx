@@ -26,8 +26,8 @@ const useStyles = makeStyles({
   }
 });
 
-export const Contact: React.FC = () => {
-  const styles = useStyles();
+const Contact: React.FC = () => {
+  const { root, phone, button, header } = useStyles();
 
   const [information, setValues] = React.useState({
     name: '',
@@ -46,26 +46,28 @@ export const Contact: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Paper>
-        <div className={styles.root}>
-          <Typography className={styles.header}>Get in touch!</Typography>
+        <div className={root}>
+          <Typography className={header}>Get in touch!</Typography>
           <TextField label="Name" name="name" onChange={updateValue} value={information.name} />
           <TextField label="Email" name="email" onChange={updateValue} value={information.email} />
           <TextField label="Message" name="message" onChange={updateValue} value={information.message} multiline />
           <Button
-            className={styles.button}
+            className={button}
             onClick={() => sendEmail(information.name, information.email, information.message)}
           >
             Send
           </Button>
           <Typography>You can also reach us at:</Typography>
           <Typography>
-            <a href="tel:5405199781" className={styles.phone}>
+            <a href="tel:5405199781" className={phone}>
               (540) 519-9781
             </a>
           </Typography>
-          <Typography>randiron@gmail.com</Typography>
+          <Typography>randd.iron@gmail.com</Typography>
         </div>
       </Paper>
     </Container>
   );
 };
+
+export default Contact;
