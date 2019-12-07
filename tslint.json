@@ -12,6 +12,7 @@
     "no-object-literal-type-assertion": false,
     "object-literal-sort-keys": false,
     "no-submodule-imports": false,
+    "max-classes-per-file": false,
     "ordered-imports": [
       true,
       {

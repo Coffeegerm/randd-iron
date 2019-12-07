@@ -3,3 +3,8 @@ export class TileData {
   public cols!: number;
   public title!: string;
 }
+
+export class ImageInformation {
+  public image!: string;
+  public imageTitle!: string;
+}

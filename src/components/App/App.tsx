@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
-import ReactGA from 'react-ga';
 import { Route, Router, Switch } from 'react-router-dom';
 
 import History from '../../common/utils/history';
