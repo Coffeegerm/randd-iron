@@ -13,7 +13,8 @@ interface ImagePreviewProps {
 const useStyles = makeStyles({
   content: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flex: 1
   }
 });
 
@@ -27,10 +28,10 @@ const ImagePreview = (props: ImagePreviewProps) => {
 
   return (
     <React.Fragment>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="max-width-dialog-title" fullWidth={true} maxWidth="md">
+      <Dialog open={open} onClose={handleClose} aria-labelledby="max-width-dialog-title" fullWidth={true} maxWidth="lg">
         <DialogTitle id="max-width-dialog-title">{imageTitle}</DialogTitle>
         <DialogContent className={content}>
-          <img src={image} alt={imageTitle} width={matches ? '200' : '600'} height={matches ? '200' : '600'} />
+          <img src={image} alt={imageTitle} width={matches ? '200' : undefined} height={matches ? '200' : undefined} />
         </DialogContent>
       </Dialog>
     </React.Fragment>

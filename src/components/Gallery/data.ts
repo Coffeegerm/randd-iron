@@ -4,14 +4,20 @@ import cad from '../../assets/cad-drawing.jpg';
 import circlerailing from '../../assets/circlerailing.jpg';
 import circlerailing2 from '../../assets/circlerailing2.jpg';
 import crmclose from '../../assets/crmclose.jpg';
+import door from '../../assets/door.jpg';
+import doorraillings from '../../assets/doorrailings.jpg';
 import embrace from '../../assets/embrace.jpg';
 import gate from '../../assets/gate.jpg';
 import insideStairs from '../../assets/inside-stairs.jpg';
+import mallgates1 from '../../assets/mallgates1.jpg';
 import outsideGate from '../../assets/outside-gate.jpg';
 import outsideRailing from '../../assets/outside-railing.jpg';
 import pool_railing from '../../assets/pool_railing.jpg';
 import pool_railing2 from '../../assets/pool_railing2.jpg';
 import saleclose from '../../assets/saleclose.jpg';
+import sign from '../../assets/sign.jpg';
+import sign2 from '../../assets/sign2.jpg';
+import srailings from '../../assets/srailings.jpg';
 import stairsInProgress from '../../assets/stairs-in-progress.jpg';
 import stairs from '../../assets/stairs.jpg';
 import supportBeam from '../../assets/support-beams.jpg';
@@ -39,6 +45,21 @@ export const railings = [
     img: circlerailing2,
     cols: 8,
     title: 'Circle Railing 2'
+  },
+  {
+    img: doorraillings,
+    cols: 12,
+    title: 'Railings Gaurding Door'
+  },
+  {
+    img: mallgates1,
+    cols: 20,
+    title: 'Walkway Railings Inside'
+  },
+  {
+    img: outsideRailing,
+    cols: 10,
+    title: 'Railing'
   }
 ];
 
@@ -95,6 +116,16 @@ export const misc = [
     img: supportBeam,
     cols: 16,
     title: 'Supports Beams'
+  },
+  {
+    img: sign,
+    cols: 16,
+    title: 'Iron & Ale Sign'
+  },
+  {
+    img: sign2,
+    cols: 16,
+    title: 'Iron & Ale Sign'
   }
 ];
 
@@ -113,6 +144,11 @@ export const stairsData = [
     img: stairsInProgress,
     cols: 8,
     title: 'Stairs in Progress'
+  },
+  {
+    img: door,
+    cols: 8,
+    title: ''
   }
 ];
 
@@ -129,8 +165,8 @@ export const gates = [
     title: 'Gate'
   },
   {
-    img: outsideRailing,
-    cols: 6,
-    title: 'Railing'
+    img: srailings,
+    cols: 20,
+    title: 'Gate With Engraved S'
   }
 ];
