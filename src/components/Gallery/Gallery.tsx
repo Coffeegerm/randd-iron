@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import { benches, gates, misc, railings, stairsData } from './data';
 import ImageGrid from './ImageGrid/ImageGrid';
+import { TileData } from './models';
 
 const useStyles = makeStyles({
   header: {
@@ -13,23 +14,40 @@ const useStyles = makeStyles({
   }
 });
 
+const grids = [
+  {
+    title: 'Benches',
+    images: benches
+  },
+  {
+    title: 'Gates',
+    images: gates
+  },
+  {
+    title: 'Railings',
+    images: railings
+  },
+  {
+    title: 'Stairs',
+    images: stairsData
+  },
+  {
+    title: 'Miscellaneous',
+    images: misc
+  }
+];
+
 export const Gallery = () => {
   const { header } = useStyles();
 
-  return (
-    <div>
-      <Typography className={header}>Railings</Typography>
-      <ImageGrid images={railings} />
-      <Typography className={header}>Benches</Typography>
-      <ImageGrid images={benches} />
-      <Typography className={header}>Stairs</Typography>
-      <ImageGrid images={stairsData} />
-      <Typography className={header}>Gates</Typography>
-      <ImageGrid images={gates} />
-      <Typography className={header}>Miscellaneous</Typography>
-      <ImageGrid images={misc} />
-    </div>
+  const createImageGrid = (title: string, images: TileData[]) => (
+    <>
+      <Typography className={header}>{title}</Typography>
+      <ImageGrid images={images} />
+    </>
   );
+
+  return <>{grids.map(({ title, images }) => createImageGrid(title, images))}</>;
 };
 
 export default Gallery;

@@ -1,11 +1,12 @@
+import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import './index.css';
+
 import { App } from './components/App/App';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { ThemeProvider } from '@material-ui/styles';
 import theme from './theme';
-import { CssBaseline } from '@material-ui/core';
 
 const Root = () => (
   <ThemeProvider theme={theme}>

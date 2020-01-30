@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   }
 });
 
-const About: React.FC = () => {
+const About = () => {
   const { container, typography } = useStyles();
   return (
     <AppBar position="static" className={container}>

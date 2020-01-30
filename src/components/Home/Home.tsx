@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Home: React.FC = () => {
+const Home = () => {
   const { container, typography, mobileTypography } = useStyles();
 
   const matches = useMediaQuery('(max-width: 768px)');

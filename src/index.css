@@ -1,39 +1,39 @@
 @font-face {
   font-family: 'BlastrickNormal';
-  src: local('BlastrickNormal'), url(./fonts/Blastrick-Normal.ttf) format('truetype');
+  src: local('BlastrickNormal'), url(./assets/fonts/Blastrick-Normal.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickNormalInline';
-  src: local('BlastrickNormalInline'), url(./fonts/Blastrick-Normal-Inline.ttf) format('truetype');
+  src: local('BlastrickNormalInline'), url(./assets/fonts/Blastrick-Normal-Inline.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickNormalOutline';
-  src: local('BlastrickNormalOutline'), url(./fonts/Blastrick-Normal-Outline.ttf) format('truetype');
+  src: local('BlastrickNormalOutline'), url(./assets/fonts/Blastrick-Normal-Outline.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickNormalShadow';
-  src: local('BlastrickNormalShadow'), url(./fonts/Blastrick-Normal-Shadow.ttf) format('truetype');
+  src: local('BlastrickNormalShadow'), url(./assets/fonts/Blastrick-Normal-Shadow.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickSpecialInline';
-  src: local('BlastrickSpecialInline'), url(./fonts/Blastrick-Special-Inline.ttf) format('truetype');
+  src: local('BlastrickSpecialInline'), url(./assets/fonts/Blastrick-Special-Inline.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickSpecialOutline';
-  src: local('BlastrickSpecialOutline'), url(./fonts/Blastrick-Special-Outline.ttf) format('truetype');
+  src: local('BlastrickSpecialOutline'), url(./assets/fonts/Blastrick-Special-Outline.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickSpecialShadow';
-  src: local('BlastrickSpecialShadow'), url(./fonts/Blastrick-Special-Shadow.ttf) format('truetype');
+  src: local('BlastrickSpecialShadow'), url(./assets/fonts/Blastrick-Special-Shadow.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'BlastrickSpecial';
-  src: local('BlastrickSpecial'), url(./fonts/Blastrick-Special.ttf) format('truetype');
+  src: local('BlastrickSpecial'), url(./assets/fonts/Blastrick-Special.ttf) format('truetype');
 }

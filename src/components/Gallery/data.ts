@@ -9,7 +9,6 @@ import gate from '../../assets/gate.jpg';
 import insideStairs from '../../assets/inside-stairs.jpg';
 import outsideGate from '../../assets/outside-gate.jpg';
 import outsideRailing from '../../assets/outside-railing.jpg';
-import outsideStairs from '../../assets/outside-stairs.jpg';
 import pool_railing from '../../assets/pool_railing.jpg';
 import pool_railing2 from '../../assets/pool_railing2.jpg';
 import saleclose from '../../assets/saleclose.jpg';
@@ -109,11 +108,6 @@ export const stairsData = [
     img: insideStairs,
     cols: 16,
     title: 'Inside Stairs'
-  },
-  {
-    img: outsideStairs,
-    cols: 8,
-    title: 'Outside Stairs'
   },
   {
     img: stairsInProgress,

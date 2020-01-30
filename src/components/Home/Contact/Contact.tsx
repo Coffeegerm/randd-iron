@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const { root, phone, button, header } = useStyles();
 
   const [information, setValues] = React.useState({
