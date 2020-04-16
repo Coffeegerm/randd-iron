@@ -1,3 +1,7 @@
+import photo1 from '../../assets/1.jpg';
+import photo2 from '../../assets/2.jpg';
+import photo3 from '../../assets/3.jpg';
+import photo4 from '../../assets/4.jpg';
 import bench from '../../assets/bench.jpg';
 import box from '../../assets/box.jpg';
 import cad from '../../assets/cad-drawing.jpg';
@@ -8,14 +12,18 @@ import door from '../../assets/door.jpg';
 import doorraillings from '../../assets/doorrailings.jpg';
 import embrace from '../../assets/embrace.jpg';
 import gate from '../../assets/gate.jpg';
+import insiderailing from '../../assets/inside-railing.jpg';
 import insideStairs from '../../assets/inside-stairs.jpg';
 import mallgates1 from '../../assets/mallgates1.jpg';
+import metalstairs from '../../assets/metastairs.jpg';
+import outerrailing from '../../assets/outer_railing.jpg';
 import outsideRailing from '../../assets/outside-railing.jpg';
 import pool_railing from '../../assets/pool_railing.jpg';
 import pool_railing2 from '../../assets/pool_railing2.jpg';
 import saleclose from '../../assets/saleclose.jpg';
 import sign from '../../assets/sign.jpg';
 import sign2 from '../../assets/sign2.jpg';
+import stairpansandtilework from '../../assets/stairpainsandtilework.jpg';
 import stairsInProgress from '../../assets/stairs-in-progress.jpg';
 import stairs from '../../assets/stairs.jpg';
 import supportBeam from '../../assets/support-beams.jpg';
@@ -58,6 +66,20 @@ export const railings = [
     img: outsideRailing,
     cols: 10,
     title: 'Railing'
+  },
+  {
+    img: insiderailing,
+    cols: 10,
+    title: ''
+  },
+  {
+    img: outerrailing,
+    cols: 10,
+    title: ''
+  },
+  {
+    img: photo4,
+    cols: 10
   }
 ];
 
@@ -124,6 +146,16 @@ export const misc = [
     img: sign2,
     cols: 16,
     title: 'Iron & Ale Sign'
+  },
+  {
+    img: photo2,
+    cols: 8,
+    title: ''
+  },
+  {
+    img: stairpansandtilework,
+    cols: 12,
+    title: ''
   }
 ];
 
@@ -145,6 +177,16 @@ export const stairsData = [
   },
   {
     img: door,
+    cols: 8,
+    title: ''
+  },
+  {
+    img: metalstairs,
+    cols: 8,
+    title: ''
+  },
+  {
+    img: photo3,
     cols: 8,
     title: ''
   }
