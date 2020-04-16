@@ -15,7 +15,7 @@ import gate from '../../assets/gate.jpg';
 import insiderailing from '../../assets/inside-railing.jpg';
 import insideStairs from '../../assets/inside-stairs.jpg';
 import mallgates1 from '../../assets/mallgates1.jpg';
-import metalstairs from '../../assets/metastairs.jpg';
+import metalstairs from '../../assets/metalstairs.jpg';
 import outerrailing from '../../assets/outer_railing.jpg';
 import outsideRailing from '../../assets/outside-railing.jpg';
 import pool_railing from '../../assets/pool_railing.jpg';
@@ -23,7 +23,7 @@ import pool_railing2 from '../../assets/pool_railing2.jpg';
 import saleclose from '../../assets/saleclose.jpg';
 import sign from '../../assets/sign.jpg';
 import sign2 from '../../assets/sign2.jpg';
-import stairpansandtilework from '../../assets/stairpainsandtilework.jpg';
+import stairpansandtilework from '../../assets/stairpansandtilework.jpg';
 import stairsInProgress from '../../assets/stairs-in-progress.jpg';
 import stairs from '../../assets/stairs.jpg';
 import supportBeam from '../../assets/support-beams.jpg';
@@ -79,7 +79,8 @@ export const railings = [
   },
   {
     img: photo4,
-    cols: 10
+    cols: 10,
+    title: ''
   }
 ];
 
@@ -187,6 +188,11 @@ export const stairsData = [
   },
   {
     img: photo3,
+    cols: 8,
+    title: ''
+  },
+  {
+    img: photo1,
     cols: 8,
     title: ''
   }
