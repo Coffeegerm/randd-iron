@@ -1,0 +1,23 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex-grow: 1;
+  width: 33%;
+  padding: 12px 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    flex-grow: 1;
+    width: 100%;
+    padding: 12px 12px;
+  }
+}

@@ -1,53 +1,28 @@
-import { makeStyles, Typography } from '@material-ui/core';
-import * as React from 'react';
+import { CloudinaryContext, Image } from 'cloudinary-react';
+import React, { useEffect, useState } from 'react';
 
-import { benches, gates, misc, railings, stairsData } from './data';
-import ImageGrid from './ImageGrid/ImageGrid';
-import { TileData } from './models';
+import { fetchPhotos } from '../../common/utils/cloudinary';
 
-const useStyles = makeStyles({
-  header: {
-    fontSize: '26px',
-    color: 'white',
-    textAlign: 'center',
-    paddingTop: '12px'
-  }
-});
-
-const grids = [
-  {
-    title: 'Benches',
-    images: benches
-  },
-  {
-    title: 'Gates',
-    images: gates
-  },
-  {
-    title: 'Railings',
-    images: railings
-  },
-  {
-    title: 'Stairs',
-    images: stairsData
-  },
-  {
-    title: 'Miscellaneous',
-    images: misc
-  }
-];
+import './Gallery.css';
 
 export const Gallery = () => {
-  const { header } = useStyles();
+  const [images, setImages] = useState(Array<any>());
 
-  const createImageGrid = (title: string, images: TileData[]) => (
-    <>
-      <Typography className={header}>{title}</Typography>
-      <ImageGrid images={images} />
-    </>
+  useEffect(() => {
+    fetchPhotos('randdiron', setImages);
+  }, []);
+
+  return (
+    <div className="container">
+      <CloudinaryContext cloudName="coffeegerm">
+        <div className="photos">
+          {images.map(i => (
+            <Image className="image" key={i} publicId={i} fetch-format="auto" quality="auto" width="600" />
+          ))}
+        </div>
+      </CloudinaryContext>
+    </div>
   );
-
-  return <>{grids.map(({ title, images }) => createImageGrid(title, images))}</>;
 };
 
 export default Gallery;

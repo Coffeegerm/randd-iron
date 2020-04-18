@@ -6,6 +6,7 @@ import History from '../../common/utils/history';
 import Bar from '../Bar/Bar';
 import Gallery from '../Gallery/Gallery';
 import Home from '../Home/Home';
+import Upload from '../Upload/Upload';
 
 const useStyles = makeStyles({
   app: {
@@ -23,6 +24,7 @@ export const App: React.FC = () => {
       <div className={app}>
         <Bar />
         <Switch>
+          <Route path="/upload" component={Upload} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/" component={Home} />
         </Switch>
